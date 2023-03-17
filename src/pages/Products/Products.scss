@@ -1,0 +1,8 @@
+@import "src/styles/variables";
+
+.products-page_container {
+  display: flex;
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+  }
+}
