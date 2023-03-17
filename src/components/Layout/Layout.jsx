@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import { useMatches } from "react-router-dom";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
+import BreadcrumbsCustom from "../Breadcrumbs/BreadcrumbsCustom";
 import './Layout.scss'
 const Layout = ({children}) => {
     const matches = useMatches();
@@ -9,7 +9,7 @@ const Layout = ({children}) => {
     return (
         <div className={'layout'}>
             <Header />
-            <Breadcrumbs />
+            <BreadcrumbsCustom />
             {children}
         </div>
     )
