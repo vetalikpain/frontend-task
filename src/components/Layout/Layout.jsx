@@ -1,10 +1,8 @@
 import React from "react";
 import Header from "../Header/Header";
 import { useMatches } from "react-router-dom";
-
-import './Layout.scss'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
-
+import './Layout.scss'
 const Layout = ({children}) => {
     const matches = useMatches();
     console.log(matches)

@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import {Checkbox, FormControlLabel, FormGroup} from "@mui/material";
 import Slider from '@mui/material/Slider';
-
-
 import useProductFilter from "../../hooks/useFilters";
 import {brands, price} from "../../db/filters";
 
