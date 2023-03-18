@@ -6,8 +6,9 @@ import {brands, price} from "../../db/filters";
 
 import './FilterBar.scss'
 
+
 const FilterBar = () => {
-    const {applyFilters} = useProductFilter()
+    const {showMobileFilters, applyFilters} = useProductFilter()
 
     const [selectedBrands, setSelectedBrands] = useState([]);
     const [selectedPrices, setSelectedPrices] = useState([0, 2000]);
@@ -31,7 +32,7 @@ const FilterBar = () => {
     };
 
     return (
-        <div className={'filters-container'}>
+        <div className={`filters-container ${showMobileFilters ? 'show-mobile-filters' : null}`}>
             <div className="brands-filters">
                 <div className={'filter-title_wrapper'}>
                     <h4>Brands</h4>
@@ -55,7 +56,7 @@ const FilterBar = () => {
                     <Slider
                         min={price[0]}
                         max={price[1]}
-                        valueLabelDisplay="auto"
+
                         step={1}
                         value={selectedPrices}
                         onChange={handlePriceChange}

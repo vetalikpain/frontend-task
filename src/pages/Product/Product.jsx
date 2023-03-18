@@ -21,7 +21,7 @@ const Product = () => {
                     <h3>{product?.name}</h3>
                     <p className={'product-price'}>${product?.price}</p>
                     <button>Buy</button>
-                    <div className={'product-info_row row-underline'}>
+                    <div className={'product-info_row row-underline category-row'}>
                         <p>Category:</p>
                         <p>{product?.category}</p>
                     </div>

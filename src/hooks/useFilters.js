@@ -1,22 +1,24 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { setBrandsFilter, setPricesFilter, setSort} from '../redux/filterReducer';
+import {useSelector, useDispatch} from 'react-redux';
+import {setBrandsFilter, setPricesFilter, setSort, setShowMobileFilters} from '../redux/filterReducer';
 
 const useProductFilter = () => {
     const dispatch = useDispatch();
-    const brandFilter = useSelector((state) => state.filter.brand);
-    const priceFilter = useSelector((state) => state.filter.price);
-
-    const applyFilters =  (filters) => {
+    const {showMobileFilters, sortMethod, brandFilter, priceFilter} = useSelector((state) => state.filter)
+    const applyFilters = (filters) => {
         const {brands, prices} = filters;
 
         dispatch(setBrandsFilter(brands));
         dispatch(setPricesFilter(prices));
     }
 
-    const setSorting = (sortMethod) => {
+    const applySorting = (sortMethod) => {
         dispatch(setSort(sortMethod))
     };
 
-    return { brandFilter, priceFilter, applyFilters, setSorting };
+    const applyMobileFilters = () => {
+        dispatch(setShowMobileFilters())
+    }
+
+    return {brandFilter, priceFilter, showMobileFilters, sortMethod, applyFilters, applySorting, applyMobileFilters};
 };
 export default useProductFilter

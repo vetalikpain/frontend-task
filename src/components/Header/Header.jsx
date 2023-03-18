@@ -12,9 +12,6 @@ const Header = () => {
                 <h2><span>Frontend task</span></h2>
                 <h2>Vitaliy Moshkivskiy</h2>
             </header>
-            <header className={'mobile-header'}>
-                return Electronics
-            </header>
         </>
     )
 }

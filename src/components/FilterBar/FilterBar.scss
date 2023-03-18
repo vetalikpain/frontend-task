@@ -4,7 +4,9 @@
   max-width: 300px;
   display: flex;
   flex-direction: column;
-
+  @media screen and (max-width: $tablets) {
+    min-width: 150px;
+  }
   @media screen and (max-width: $mobile) {
     display: none;
     flex-direction: column-reverse;
@@ -85,5 +87,10 @@
     @media screen and (max-width: $mobile) {
       display: block;
     }
+  }
+}
+.show-mobile-filters {
+  @media screen and (max-width: $mobile){
+    display: flex;
   }
 }

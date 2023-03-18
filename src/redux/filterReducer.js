@@ -18,10 +18,13 @@ const filterSlice = createSlice({
         setSort: (state, action) => {
             state.sortMethod = action.payload;
         },
+        setShowMobileFilters: (state) => {
+            state.showMobileFilters = !state.showMobileFilters;
+        },
     },
 });
 
-export const { setBrandsFilter, setPricesFilter, setSort } = filterSlice.actions;
+export const { setBrandsFilter, setPricesFilter, setSort, setShowMobileFilters } = filterSlice.actions;
 
 export default filterSlice.reducer;
 

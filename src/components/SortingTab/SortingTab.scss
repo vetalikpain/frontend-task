@@ -24,12 +24,23 @@
     align-items: center;
     justify-content: space-around;
     width: 190px;
+    @media screen and (max-width: $mobile) {
+      font-size: 14px;
+    }
     &:hover {
       cursor: pointer;
     }
 
     &:first-child {
-      margin-right: 10px;
+      margin-right: 5px;
+    }
+  }
+  .show-mobile-filters {
+    display: none;
+    width: auto;
+    margin-left: 5px;
+    @media screen and (max-width: $mobile) {
+      display: block;
     }
   }
 }

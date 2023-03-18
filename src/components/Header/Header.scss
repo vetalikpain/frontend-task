@@ -1,15 +1,5 @@
 @import "src/styles/variables";
-.desktop-header{
-  @media screen and (max-width: $mobile) {
-    display: none;
-  }
-}
-.mobile-header {
-  display: none;
-  @media screen and (max-width: $mobile) {
-    display: block;
-  }
-}
+
 header {
   display: flex;
   justify-content: flex-start;
@@ -19,7 +9,9 @@ header {
   font-style: normal;
   letter-spacing: -0.2px;
   line-height: 28px;
-
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
   h2 {
     color: #0D6EFD;
   }
