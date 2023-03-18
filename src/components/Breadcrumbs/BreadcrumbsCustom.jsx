@@ -1,6 +1,7 @@
 import React from "react";
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import {Link, useLocation} from "react-router-dom";
+import {v4 as uuidv4} from "uuid";
 import {Typography} from "@mui/material";
 import ArrowBackSvg from "../../assets/ArrowBackSvg";
 import './BreadcrumbsCustom.scss'
@@ -22,11 +23,11 @@ const BreadcrumbsCustom = () => {
                         const isLast = index === pathNames.length - 1;
 
                         return isLast ? (
-                            <Typography color="text.primary" key={routeTo}>
+                            <Typography key={uuidv4()} color="text.primary">
                                 {name}
                             </Typography>
                         ) : (
-                            <Link key={routeTo} color="inherit" to={routeTo}>
+                            <Link key={uuidv4()} color="inherit" to={routeTo}>
                                 {name}
                             </Link>
                         );
@@ -35,7 +36,7 @@ const BreadcrumbsCustom = () => {
             </div>
             <div className={'mobile-breadcrumbs'}>
                 <Link to={'/electronic'}><ArrowBackSvg/></Link>
-                {pathNames[pathNames.length - 1] === 'electronic' ? <p>Electronics</p> : null}
+                {pathNames[pathNames.length - 1] === 'electronic' || location.pathname === '/' ? <p>Electronics</p> : null}
             </div>
         </div>
     );

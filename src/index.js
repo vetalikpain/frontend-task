@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-    createBrowserRouter, Link,
+    createBrowserRouter,
     RouterProvider,
-    redirect
 } from "react-router-dom";
 import {Provider} from "react-redux";
 import Product from "./pages/Product/Product";
@@ -17,7 +16,6 @@ import './styles/normalize.scss'
 const router = createBrowserRouter([
     {
         path: '/',
-
         element: <Root/>,
         children: [
             {

@@ -6,6 +6,7 @@ import useProductFilter from "../../../hooks/useFilters";
 import {brands, price} from "../../../db/filters";
 
 import './FilterBar.scss'
+import {v4 as uuidv4} from "uuid";
 
 
 const FilterBar = () => {
@@ -43,6 +44,7 @@ const FilterBar = () => {
                     {brands.map((brand) => {
                         const checked = selectedBrands.includes(brand);
                         return <FormControlLabel
+                            key={uuidv4()}
                             control={<Checkbox onChange={() => handleBrandChange(checked, brand)} checked={checked}/>}
                             label={brand}/>
                     })}
