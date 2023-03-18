@@ -1,10 +1,10 @@
 export const sortProducts = (filters, products) => {
-    const {sorting} = filters
+    const {sortMethod} = filters
     const sort = (products) => {
-        if (sorting === 'asc') {
+        if (sortMethod === 'asc') {
             return [...products].sort((a, b) => (a.price > b.price ? 1 : -1))
         }
-        if (sorting === 'desc') {
+        if (sortMethod === 'desc') {
             return [...products].sort((a, b) => (a.price < b.price ? 1 : -1))
         }
         return products;

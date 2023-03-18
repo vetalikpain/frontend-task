@@ -5,7 +5,8 @@ const filterSlice = createSlice({
     initialState: {
         brands: [],
         prices: [],
-        sorting: ''
+        sortMethod: 'asc',
+        showMobileFilters: false,
     },
     reducers: {
         setBrandsFilter: (state, action) => {
@@ -15,7 +16,7 @@ const filterSlice = createSlice({
             state.prices = action.payload;
         },
         setSort: (state, action) => {
-            state.sorting = action.payload;
+            state.sortMethod = action.payload;
         },
     },
 });

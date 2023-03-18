@@ -6,7 +6,9 @@
   flex-direction: column;
 
   @media screen and (max-width: $mobile) {
+    display: none;
     flex-direction: column-reverse;
+    max-width: 100%;
   }
   .filter-title_wrapper {
     @media screen and (max-width: $mobile) {

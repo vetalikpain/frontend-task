@@ -1,3 +1,7 @@
+@import "src/styles/variables";
 .products-list {
   padding-left: 20px;
+  @media screen and (max-width: $mobile) {
+    padding-left: 0;
+  }
 }

@@ -9,12 +9,11 @@ const ProductsList = () => {
     const products = useSelector(state => {
         const products = state.products.productsList;
         const filters = state.filter;
-
         const filteredProducts = getFilteredProducts(filters, products);
         const isSomeFilterApplyed = !!filters.brands.length || !!filters.prices.length;
-        const sortingProducts = sortProducts(filters, filteredProducts)
+        const sortingProducts = sortProducts(filters, !isSomeFilterApplyed ? products : filteredProducts)
 
-        return !isSomeFilterApplyed ? products : sortingProducts
+        return sortingProducts
     })
 
     return (
