@@ -4,7 +4,7 @@ import './ProductItem.scss'
 
 const ProductItem = ({product}) => {
     return (
-        <Link to={`/product/${product.id}`}>
+        <Link to={`/electronic/${product.linkName}`}>
             <div className={'product-item_container'}>
                 <div className={'product-img_wrapper'}>
                     <img src={product.img} alt=""/>

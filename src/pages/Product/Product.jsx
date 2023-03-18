@@ -5,12 +5,12 @@ import {products} from "../../db/products";
 import './Product.scss'
 
 const Product = () => {
-    const {id} = useParams()
+    const {linkName} = useParams()
     const [product, setProduct] = useState(null)
 
     useEffect(() => {
-        setProduct(products.find(el => el.id == id))
-    }, [id])
+        setProduct(products.find(el => el.linkName === linkName))
+    }, [linkName])
 
     return (
         <div className={'product-info-container'}>

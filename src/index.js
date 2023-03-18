@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import {
     createBrowserRouter, Link,
     RouterProvider,
+    redirect
 } from "react-router-dom";
 import {Provider} from "react-redux";
 import Product from "./pages/Product/Product";
@@ -16,6 +17,7 @@ import './styles/normalize.scss'
 const router = createBrowserRouter([
     {
         path: '/',
+
         element: <Root/>,
         children: [
             {
@@ -23,11 +25,25 @@ const router = createBrowserRouter([
                 element: <Products/>
             },
             {
-                path: 'product/:id',
+                path: 'electronic/:linkName',
                 element: <Product/>
             }
         ],
     },
+    {
+        path: '/electronic',
+        element: <Root/>,
+        children: [
+            {
+                index: true,
+                element: <Products/>
+            },
+            {
+                path: 'electronic/:linkName',
+                element: <Product/>
+            }
+        ],
+    }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

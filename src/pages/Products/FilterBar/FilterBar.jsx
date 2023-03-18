@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {Checkbox, FormControlLabel, FormGroup} from "@mui/material";
 import Slider from '@mui/material/Slider';
 
-import useProductFilter from "../../hooks/useFilters";
-import {brands, price} from "../../db/filters";
+import useProductFilter from "../../../hooks/useFilters";
+import {brands, price} from "../../../db/filters";
 
 import './FilterBar.scss'
 
@@ -66,11 +66,11 @@ const FilterBar = () => {
                 <div className={'inputs-wrapper'}>
                     <label htmlFor="{'min'}">
                         Min
-                        <input id={'min'} type="text" value={selectedPrices[0]}/>
+                        <input readOnly id={'min'} type="text" value={selectedPrices[0]}/>
                     </label>
-                    <label htmlFor="{'max'}">
+                    <label  htmlFor="{'max'}">
                         Max
-                        <input id={'max'} type="text" value={selectedPrices[1]}/>
+                        <input readOnly id={'max'} type="text" value={selectedPrices[1]}/>
                     </label>
                 </div>
             </div>

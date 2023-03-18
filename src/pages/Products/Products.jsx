@@ -1,8 +1,8 @@
 import React from "react";
 
-import ProductsList from "../../components/ProductList/ProductsList";
-import SortingTab from "../../components/SortingTab/SortingTab";
-import FilterBar from "../../components/FilterBar/FilterBar";
+import ProductsList from "./ProductList/ProductsList";
+import SortingTab from "./SortingTab/SortingTab";
+import FilterBar from "./FilterBar/FilterBar";
 
 
 import './Products.scss'

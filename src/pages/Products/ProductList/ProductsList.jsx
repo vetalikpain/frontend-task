@@ -2,8 +2,8 @@ import React from "react";
 import {useSelector} from "react-redux";
 import ProductItem from "../ProductItem/ProductItem";
 import './ProductList.scss'
-import {sortProducts} from "../../helpers/sortProducts";
-import {getFilteredProducts} from "../../helpers/getFilteredProducts";
+import {sortProducts} from "../../../helpers/sortProducts";
+import {getFilteredProducts} from "../../../helpers/getFilteredProducts";
 
 const ProductsList = () => {
     const products = useSelector(state => {
@@ -19,7 +19,7 @@ const ProductsList = () => {
     return (
         <div className={'products-list'}>
             {products.map(el => {
-                return (<ProductItem product={el}/>)
+                return (<ProductItem product={el} key={el.id}/>)
             })}
         </div>
     )

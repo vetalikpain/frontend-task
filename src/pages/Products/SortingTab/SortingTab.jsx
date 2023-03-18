@@ -1,10 +1,10 @@
 import React from "react";
 
-import useFilters from "../../hooks/useFilters";
-import SortIconHigh from "../../assets/SortIconLow";
-import SortIconLow from "../../assets/SortIconLow";
-import FilterAlt from "../../assets/FilterAlt";
-import CloseFiltersSvg from "../../assets/CloseFiltersSvg";
+import useFilters from "../../../hooks/useFilters";
+import SortIconHigh from "../../../assets/SortIconLow";
+import SortIconLow from "../../../assets/SortIconLow";
+import FilterAlt from "../../../assets/FilterAlt";
+import CloseFiltersSvg from "../../../assets/CloseFiltersSvg";
 
 import './SortingTab.scss'
 

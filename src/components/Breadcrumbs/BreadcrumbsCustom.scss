@@ -10,6 +10,7 @@
 }
 
 .desktop-breadcrumbs {
+  text-transform: capitalize;
   @media screen and (max-width: $mobile) {
     display: none;
   }
@@ -17,10 +18,12 @@
 
 .mobile-breadcrumbs {
   display: none;
+  padding: 10px 0;
   @media screen and (max-width: $mobile) {
     display: flex;
     align-items: center;
     p {
+      margin: 0;
       padding-left: 20px;
       font-weight: bold;
       font-size: 20px;
