@@ -83,7 +83,6 @@
   }
 
 
-
   .product-info_row {
     display: flex;
     text-align: left;
@@ -99,6 +98,7 @@
       margin-right: 20px;
     }
   }
+
   .category-row {
     @media screen and (max-width: $mobile) {
       display: none;

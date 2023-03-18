@@ -4,14 +4,15 @@ import {
     createBrowserRouter, Link,
     RouterProvider,
 } from "react-router-dom";
-import Root from "./routes/root";
-import './styles/index.scss'
+import {Provider} from "react-redux";
 import Product from "./pages/Product/Product";
 import Products from "./pages/Products/Products";
 import {store} from "./redux/store";
-import {Provider} from "react-redux";
 
+import Root from "./routes/root";
+import './styles/index.scss'
 import './styles/normalize.scss'
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -33,12 +34,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-
-            <Provider store={store}>
-
-                <RouterProvider router={router}/>
-
-            </Provider>
-
+        <Provider store={store}>
+            <RouterProvider router={router}/>
+        </Provider>
     </React.StrictMode>
 );

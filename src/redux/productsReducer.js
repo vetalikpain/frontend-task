@@ -5,6 +5,4 @@ const initialState = {
     productsList: products,
 }
 
-export default createReducer(initialState, {
-
-})
+export default createReducer(initialState, {})

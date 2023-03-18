@@ -1,4 +1,5 @@
 @import "src/styles/variables";
+
 .sorting-tab {
   padding: 10px 20px;
   background-color: white;
@@ -11,9 +12,11 @@
     padding: 0;
     border: none;
   }
+
   .active-sort_btn {
     border-color: $blue;
   }
+
   button {
     font-size: 16px;
     padding: 10px;
@@ -27,6 +30,7 @@
     @media screen and (max-width: $mobile) {
       font-size: 14px;
     }
+
     &:hover {
       cursor: pointer;
     }
@@ -35,6 +39,7 @@
       margin-right: 5px;
     }
   }
+
   .show-mobile-filters {
     display: none;
     width: auto;

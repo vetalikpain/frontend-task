@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 const filterSlice = createSlice({
     name: 'filter',
@@ -24,7 +24,7 @@ const filterSlice = createSlice({
     },
 });
 
-export const { setBrandsFilter, setPricesFilter, setSort, setShowMobileFilters } = filterSlice.actions;
+export const {setBrandsFilter, setPricesFilter, setSort, setShowMobileFilters} = filterSlice.actions;
 
 export default filterSlice.reducer;
 

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
+
 import {products} from "../../db/products";
 import './Product.scss'
 

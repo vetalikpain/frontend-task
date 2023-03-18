@@ -1,20 +1,16 @@
 import React from "react";
-import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
+import {Link} from "react-router-dom";
 
 import ArrowBackSvg from "../../assets/ArrowBackSvg";
 import './BreadcrumbsCustom.scss'
-import {Link} from "react-router-dom";
 
-function handleClick(event) {
-    event.preventDefault();
-    console.info('You clicked a breadcrumb.');
-}
+
 
 const BreadcrumbsCustom = () => {
     return (
         <div className={'breadcrumbs-container'}>
-            <div className={'desktop-breadcrumbs'} onClick={handleClick}>
+            <div className={'desktop-breadcrumbs'}>
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
                         Home

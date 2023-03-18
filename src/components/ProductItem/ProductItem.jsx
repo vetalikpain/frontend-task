@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import './ProductItem.scss'
 
 const ProductItem = ({product}) => {
-
     return (
         <Link to={`/product/${product.id}`}>
             <div className={'product-item_container'}>
