@@ -35,7 +35,9 @@ const BreadcrumbsCustom = () => {
                 </Breadcrumbs>
             </div>
             <div className={'mobile-breadcrumbs'}>
-                <Link to={'/electronic'}><ArrowBackSvg/></Link>
+                <Link to={'/electronic'}>
+                    <ArrowBackSvg/>
+                </Link>
                 {pathNames[pathNames.length - 1] === 'electronic' || location.pathname === '/' ? <p>Electronics</p> : null}
             </div>
         </div>
